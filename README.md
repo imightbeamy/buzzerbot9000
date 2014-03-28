@@ -1,4 +1,4 @@
-doorbot9000
+Doorbot 9000
 ===========
 
-Raspi text-to-open door robot.
+Source code for the Raspi/twilio robot that opens the door to my apartment building.
