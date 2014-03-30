@@ -1,0 +1,25 @@
+{
+  "name": "buzzerbot9000",
+  "version": "0.0.0",
+  "description": "Buzzerbot 9000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imightbeamy/buzzerbot9000.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "921b65014492d0955c7f5c938e9504eb2f6c571a",
+  "bugs": {
+    "url": "https://github.com/imightbeamy/buzzerbot9000/issues"
+  },
+  "dependencies": [
+    "config",
+    "express",
+    "logfmt"
+  ]
+}
