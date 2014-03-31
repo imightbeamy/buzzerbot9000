@@ -4,13 +4,14 @@
   "description": "Buzzerbot 9000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "./setup.sh"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/imightbeamy/buzzerbot9000.git"
   },
-  "author": "",
+  "author": "Amy Ciavolino <amyciav@gmail.com>",
   "license": "BSD",
   "readmeFilename": "README.md",
   "gitHead": "921b65014492d0955c7f5c938e9504eb2f6c571a",
