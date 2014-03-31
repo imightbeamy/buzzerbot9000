@@ -18,7 +18,7 @@
     "url": "https://github.com/imightbeamy/buzzerbot9000/issues"
   },
   "dependencies": [
-    "config",
+    "configure",
     "express",
     "logfmt"
   ]
