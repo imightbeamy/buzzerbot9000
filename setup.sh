@@ -11,7 +11,7 @@ DDNS_CRON="$DDNS_TIME ; $DDNS_CMD >> /tmp/DNS.log 2>&1 &"
 echo "Initing DDNS and adding DDNS cron to crontab:"
 echo "$DDNS_CMD"
 $DDNS_CMD
-crontab -l > temp_cron
+crontab -l | sed "/$DDNS_KEY/d" > temp_cron
 echo "$DDNS_CRON" >> temp_cron
 crontab temp_cron
 rm temp_cron
