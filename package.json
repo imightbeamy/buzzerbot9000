@@ -21,6 +21,10 @@
   "dependencies": [
     "configure",
     "express",
-    "logfmt"
+    "logfmt",
+    "gpio",
+    "twilio",
+    "underscore",
+    "moment"
   ]
 }
