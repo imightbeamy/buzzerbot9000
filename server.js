@@ -22,7 +22,7 @@ app.get('/', twilio.webhook({ url: config.url }), function(request, response) {
     response.send(twiml);
 });
 
-var port = Number(process.env.PORT || 5000);
+var port = Number(config.port);
 app.listen(port, function() {
   console.log('Listening on ' + port);
 });
