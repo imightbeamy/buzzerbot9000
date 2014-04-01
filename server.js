@@ -4,15 +4,22 @@ var config = require('configure');
 var twilio = require('twilio');
 
 var Buzzer = require('./lib/buzzer.js');
-var Passwords = require('./lib/passwords.js')
+
+process.env.TWILIO_AUTH_TOKEN = config.twilio_token;
 
 var app = express(),
-    buzzer = new Buzzer(config),
-    passwords = new Passwords(config.passwords);
+    buzzer = new Buzzer(config);
 
 console.log('Starting...');
-app.get('/', function(req, res) {
-  res.send('Hello World!');
+
+app.get('/', twilio.webhook({ url: config.url }), function(request, response) {
+    console.log(request);
+
+    //buzzer.open_door();
+
+    var twiml = new twilio.TwimlResponse();
+    twiml.message('Welcome, our robot will buzz you in momentarily');
+    response.send(twiml);
 });
 
 var port = Number(process.env.PORT || 5000);
