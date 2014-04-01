@@ -1,4 +1,5 @@
-// web.js
+"use strict";
+
 var express = require('express');
 var config = require('configure');
 var twilio = require('twilio');
@@ -12,17 +13,19 @@ var app = express(),
 
 console.log('Starting...');
 
-app.get('/', twilio.webhook({ url: config.url }), function(request, response) {
-    console.log(request);
+app.get('/sms', twilio.webhook(), function (request, response) {
+    console.log(request.query);
 
-    //buzzer.open_door();
+    var sms = request.query,
+        twil_res = new twilio.TwimlResponse();
 
-    var twiml = new twilio.TwimlResponse();
-    twiml.message('Welcome, our robot will buzz you in momentarily');
-    response.send(twiml);
+    buzzer.open_door(sms.Body, sms.From);
+
+    twil_res.message('Welcome, our robot will buzz you in momentarily');
+    response.send(twil_res);
 });
 
 var port = Number(config.port);
-app.listen(port, function() {
-  console.log('Listening on ' + port);
+app.listen(port, function () {
+    console.log('Listening on ' + port);
 });
