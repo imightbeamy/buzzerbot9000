@@ -22,7 +22,7 @@
     "configure",
     "express",
     "logfmt",
-    "gpio",
+    "pi-gpio",
     "twilio",
     "underscore",
     "moment"
