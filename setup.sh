@@ -1,5 +1,6 @@
 # Install DNS update cron
-function config {
+
+config() {
     node get_config.js $1
 }
 
@@ -15,3 +16,23 @@ crontab -l | sed "/$DDNS_KEY/d" > temp_cron
 echo "$DDNS_CRON" >> temp_cron
 crontab temp_cron
 rm temp_cron
+
+NODE=`which node`
+SERVER_DIR=`pwd`
+USER=`whoami`
+OUT=/tmp/buzzerbot.log
+
+VARS=$( cat <<EOF
+NODE=$NODE
+SERVER_DIR=$SERVER_DIR
+USER=$USER
+OUT=$OUT
+EOF
+)
+
+echo -e "#! /bin/bash\n" "$VARS" "$(cat initd_tpl.sh)" > buzzerbot_init.sh
+chmod +x buzzerbot_init.sh
+sudo mv buzzerbot_init.sh /etc/init.d/
+
+ls -l /etc/init.d/buzzerbot_init.sh
+echo "Installed init.d, logging to $OUT"
