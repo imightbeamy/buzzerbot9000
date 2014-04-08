@@ -1,7 +1,7 @@
 # Install DNS update cron
 
 config() {
-    node get_config.js $1
+    node bin/get_config.js $1
 }
 
 DDNS_TIME="1,6,11,16,21,26,31,36,41,46,51,56 * * * * sleep 43"
@@ -30,7 +30,7 @@ OUT=$OUT
 EOF
 )
 
-echo -e "#! /bin/bash\n" "$VARS" "$(cat initd_tpl.sh)" > buzzerbot_init.sh
+echo "#! /bin/bash\n" "$VARS" "$(cat initd_tpl.sh)" > buzzerbot_init.sh
 chmod +x buzzerbot_init.sh
 sudo mv buzzerbot_init.sh /etc/init.d/
 
