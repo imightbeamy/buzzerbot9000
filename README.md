@@ -39,3 +39,6 @@ If you're correctly in the group, you should see `gpio` when you run:
 * Show Facebook images of guests
 * More complex passwords
 
+
+My Raspberry pi running this connected to my apartment buzzer:
+![hardware](hardware.jpg)
