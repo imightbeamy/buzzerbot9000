@@ -1,0 +1,23 @@
+{
+    "freedns_key" : "<The key from freedns to update the DSS record>",
+    "buzz_secs": 10,
+    "buzzer_pin" : 11,
+    "twilio_token" : "<Your twilio API token>",
+    "port": 5000,
+    "passwords": {
+        "sesame": {
+            "whitelist": [
+                "555-932-1283",
+                "555-223-6513",
+            ],
+            "success_message": "Welcome home! Nice to see you!",
+            "fail_message": "Sorry, your magic has no power here"
+        },
+        "partytime": {
+            "start": "2014-04-11",
+            "end": "2014-04-13",
+            "success_message": "Welcome to our party! We're in Apt #4",
+            "fail_message": "Hmm... it's not party time yet"
+        }
+    }
+}
