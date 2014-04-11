@@ -41,4 +41,5 @@ If you're correctly in the group, you should see `gpio` when you run:
 
 
 My Raspberry pi running this connected to my apartment buzzer:
+
 ![hardware](hardware.jpg)
