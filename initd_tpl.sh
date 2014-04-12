@@ -1,4 +1,3 @@
-#! /bin/bash
 
 case "$1" in
 
@@ -18,7 +17,6 @@ restart)
 	cd $SERVER_DIR
 	sudo -u $USER $NODE server.js >> $OUT 2>>$OUT &
 	;;
-	
 *)
 	echo "usage: $0 (start|stop|restart)"
 esac
