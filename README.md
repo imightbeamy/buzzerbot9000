@@ -37,8 +37,6 @@ If you're correctly in the group, you should see `gpio` when you run:
 ## Coming soon...
 * Hardware Setup
 * Show Facebook images of guests
-* More complex passwords
-
 
 My Raspberry pi running this connected to my apartment buzzer:
 
