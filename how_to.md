@@ -114,8 +114,10 @@ Your buzzer box has a "door" button. When you press the door button, it connects
 What we want to do is connect the LED side of the optocoupler to the raspberry pi, and the photo resistor side to the door button.
 The raspberry pi will turn on the LED, which will connect the sides of the door button, and the door will open. Magic!
 
-Here's a diagram:
+Here's a diagram and an upclose look at my wiring:
 ![hardware diagram](images/hardware_diagram.png)
+![hardware close up](images/close_up_anotated.jpg)
+[Larger image](images/close_up.jpg)
 
 Turning on the optocoupler is the same as tuning on a single LED.
 So you'll need a resistor between it and your raspberry pi.
@@ -150,6 +152,7 @@ Thanks for follow this tutorial and [let me know](https://twitter.com/imightbeAm
 Here are some pictures of mine set up!
 I have my raspberry pi behind a deep picture frame that hangs above my buzzer box.
 
+![Extra pic 5](images/Extra5.jpg)
 ![Extra pic 1](images/Extra1.jpg)
 ![Extra pic 2](images/Extra2.jpg)
 ![Extra pic 3](images/Extra3.jpg)
