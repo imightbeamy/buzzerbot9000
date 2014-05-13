@@ -114,7 +114,7 @@ Here's a real life picture of my buzzer box. The light yellow wires (connected t
 
 Once you have the wires hooked up, running `test.js` should open your door!
 
-## Strp 5: Put it all together
+## Step 5: Put it all together
 
 Now you should have everything hooked up, installed and configured. Try going outside and test it! 
 
