@@ -38,9 +38,6 @@ If you're correctly in the group, you should see `gpio` when you run:
 
 [Check out the how-to](how_to.md) for more detailed instructions and hardware set up.
 
-## Coming soon...
-* Show Facebook images of guests
-
 My Raspberry pi running this connected to my apartment buzzer.
 ([More pics](https://github.com/imightbeamy/buzzerbot9000/blob/master/how_to.md#extra-pictures))
 
