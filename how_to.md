@@ -116,7 +116,7 @@ The raspberry pi will turn on the LED, which will connect the sides of the door 
 
 Here's a diagram and an upclose look at my wiring:
 ![hardware diagram](images/hardware_diagram.png)
-![hardware close up](images/close_up_anotated.jpg)
+![hardware close up](images/close_up_anotated.jpg)  
 [Larger image](images/close_up.jpg)
 
 Turning on the optocoupler is the same as tuning on a single LED.
