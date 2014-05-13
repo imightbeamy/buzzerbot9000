@@ -6,7 +6,7 @@ Chances are if you have a Raspberry pi, and you've done *anything* at all with i
 
 You'll need:
 
-* A raspberry pie with [Node js installed](http://joshondesign.com/2013/10/23/noderpi)
+* A raspberry pi with [Node js installed](http://joshondesign.com/2013/10/23/noderpi)
 * A domain from [freedns](https://freedns.afraid.org/)
 * A [twilio account](https://www.twilio.com/) with a phone number
 * An [optocoupler](http://en.wikipedia.org/wiki/Opto-isolator) (I used [this one](http://www.alliedelec.com/search/productdetail.aspx?SKU=70136788))
@@ -17,7 +17,7 @@ You'll need:
 
 ## Step 1: Install stuff!
 
-See the [read me](README.md) for the basics of installing this code on your pi. Once you install it, rename `sample_config.json` to `config.json`. We'll need to fill in the blanks, but we'll get to that later.
+See the [read me](README.md) for the basics of installing this code on your pi. Once you install it, rename [`sample_config.json`](sample_config.json) to `config.json`. You'll need to fill in the blanks, but we'll get to that later.
 
 ## Step 2: Set up your test light
 
@@ -27,7 +27,7 @@ All we need right now is get one LED turning on and off, so I'm going to defer t
 
 -----
 
-So now that you have an LED turning on and off, open up config.json, and change `buzzer_pin` to the **physical pin** number that your LED is connected to. If you used the tutorial I mentioned above, you're number is 11. Otherwise you can use this handy digram, or count from the top left. 
+So now that you have an LED turning on and off, open up config.json, and change `buzzer_pin` to the **physical pin** number that your LED is connected to. If you used the tutorial I mentioned above, your number is 11. Otherwise you can use this handy digram, or count from the top left. 
 
 TODO add link to digram.
 
@@ -54,7 +54,7 @@ So it had a static ip.
 
 ![Static local IP](images/static_ips.png)
 
-Then I sent http traffic on port 80, to port 5000 on the ip address for my raspberry pi.
+Then I sent http traffic on port 80, to port 5000 on the ip address for my raspberry pi. You can use a different port, you'll just need to change `port` in `config.json`.
 
 ![Port forwarding](images/port_forwarding.png)
 
@@ -79,7 +79,7 @@ Error when trying to close pin 11
 gpio-admin: could not flush data to /sys/class/gpio/unexport: Invalid argument
 ```
 
-Once that's running you should be able to go to your to \<your domain\>/sms in a browder and see `Webhook Error - we attempted to validate this request without first configuring our auth token.` and see this on your raspberry pi `[Twilio]: Error - Twilio auth token is required for webhook request validation.`
+Once that's running you should be able to go to \<your domain\>/sms in a browder and see `Webhook Error - we attempted to validate this request without first configuring our auth token.` and see this in the console `[Twilio]: Error - Twilio auth token is required for webhook request validation.`
 
 ### Twillio
 
@@ -89,16 +89,18 @@ Now we need to point twilio at the domain you just set up. Go to [twilio](https:
 
 Also grab your twilio Auth Token and fill in `twilio_token` in `config.json`.
 
-Now when you run `npm start` and go to your domain it should say `Twilio Request Validation Failed.`, and if you text it, you should get a message back saying "Hmmm, that's not a password" but! If you open up `config.json` and put your phone number in the "sesame" whitelist, and then text "sesame" your test light should come on for a few seconds and go back off. 
+Now when you run `npm start` and go to your domain it should say `Twilio Request Validation Failed.`, and if you text it, you should get a message back saying "Hmmm, that's not a password" but! If you open up `config.json` and put your phone number in the "sesame" whitelist, and then text "sesame" your test light should come on for a few seconds and go back off.
 
 ## Step 4: Buzzer box time!
+
+Now you need to connect your optocoupler to your raspberry pi and your buzzer box.
 
 Your optocoupler has two sides: one side has an LED, the other a photo resistor.
 When you turn the LED on, the resistor connects the leeds on the other side.
 Your buzzer box has a "door" button. When you press the door button, it connects two wires and the door opens.
 
-What we want to do is connect the LED side of the optocoupler to the raspberry, and the photo resistor side to the door button.
-The raspberry pie will turn on the LED, which will connect the sides of the door button, and the door will open. Magic!
+What we want to do is connect the LED side of the optocoupler to the raspberry pi, and the photo resistor side to the door button.
+The raspberry pi will turn on the LED, which will connect the sides of the door button, and the door will open. Magic!
 
 Here's a diagram:
 ![hardware diagram](images/hardware_diagram.png)
@@ -118,7 +120,9 @@ Now you should have everything hooked up, installed and configured. Try going ou
 
 Something isn't quite right? Did I leave something out? Be awesome and submit a pull request with a fix/addition to make things more clear. 
 
-Thankd for follow this tutorial and [let me know](https://twitter.com/imightbeAmy) if you actully get this set up!
+Thanks for follow this tutorial and [let me know](https://twitter.com/imightbeAmy) if you actully get this set up!
+
+- [Amy](http://amyciavolino.com/)
 
 ## Extra pictures
 
