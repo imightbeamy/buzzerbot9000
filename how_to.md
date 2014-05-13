@@ -1,5 +1,3 @@
-# DRAFT - This how-to is not done yet, follow at your own risk
-
 # How to set up a buzzer bot
 
 Chances are if you have a Raspberry pi, and you've done *anything* at all with it, you've turned on an LED. This project is almost as simple as that.
@@ -34,9 +32,8 @@ Once you have an LED connected to your raspberry pi, come back here.
 
 So now that you have an LED turning on and off, open up config.json, and change `buzzer_pin` to the **physical pin** number that your LED is connected to.
 If you used the tutorial I mentioned above, your number is 11.
-Otherwise you can use this handy digram, or count from the top left.
-
-TODO add link to digram.
+Otherwise you can use [this handy digram](http://www.abluestar.com/blog/wp-content/uploads/2013/02/Raspberry-Pi-GPIO-Layout-Revision-1-e1347664808358.png) to figure it out.
+The numbers in the circles are the physical pin numbers.
 
 Then, run [`node test.js`](test.js) and your LED should turn on for 2 seconds, and then turn off.
 
