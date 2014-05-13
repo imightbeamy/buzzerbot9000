@@ -103,8 +103,8 @@ I left my test light connected so I can see from my apartment when it's opening 
 
 Here's a real life picture of my buzzer box. The light yellow wires (connected to #2 and #3) are the ones running to my pi. Either of these wires can go to either wire on the photo-resistors side of the optocoupler because photo-resistors are non-polarized.
 
-![buttons_back](images/buttons_back.png)
-![buttons_back](images/buttons_front.png)
+![buttons_back](images/buttons_back.jpg)
+![buttons_back](images/buttons_front.jpg)
 
 Once you have the wires hooked up, running `test.js` should open your door!
 
@@ -118,7 +118,7 @@ Something isn't quite right? Maybe I left something out. Be awesome and submit a
 
 Here are some pictures of mine set up! I have my raspi behind a deep picture frame that hangs above my buzzer box.
 
-![Extra pic 1](images/Extra1.png)
-![Extra pic 2](images/Extra2.png)
-![Extra pic 3](images/Extra3.png)
-![Extra pic 4](images/Extra4.png)
+![Extra pic 1](images/Extra1.jpg)
+![Extra pic 2](images/Extra2.jpg)
+![Extra pic 3](images/Extra3.jpg)
+![Extra pic 4](images/Extra4.jpg)
