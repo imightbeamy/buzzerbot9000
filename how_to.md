@@ -126,7 +126,11 @@ If you're not, you'll need to figure out the resistor value yourself.
 Here's a handy [single LED series resistance calculator](http://led.linear1.org/1led.wiz).
 Source voltage is 3.3 volts, and you should be able to find the forward voltage, and the forward current on the data sheet for your optocoupler.
 
-Here's a real life picture of my buzzer box. The light yellow wires (connected to #2 and #3) are the ones running to my pi.
+Here's a real life picture of my buzzer box.
+It's a very simple box made by TekTone that most people I know have, but if your is different, don't worry.
+You just need to find the two contacts on the sides of whatever button opens your door.
+
+The light yellow wires (connected to #2 and #3) are the ones running to my pi.
 Either of these wires can go to either wire on the photo-resistors side of the optocoupler because photo-resistors are non-polarized.
 
 ![buttons_back](images/buttons_back.jpg)
@@ -147,8 +151,6 @@ Did I leave something out?
 Be awesome and submit a pull request with a fix/addition to make things more clear.
 
 Thanks for follow this tutorial and [let me know](https://twitter.com/imightbeAmy) if you actully get this set up!
-
-\- [Amy](http://amyciavolino.com/)
 
 ## Extra pictures
 
