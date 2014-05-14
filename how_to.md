@@ -24,13 +24,13 @@ You'll need to fill in the blanks, but we'll get to that later.
 
 Before we connect anything to your buzzer box, let's set up a simple test light to make sure the software is set up right.
 
-All we need right now is get one LED turning on and off, so I'm going to defer to another tutorial because there are lot of great ones already.
+All we need right now is to get one LED turning on and off, so I'm going to defer to another tutorial because there are lot of great ones already.
 [This is the one I used](https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/gpio-examples-1-a-single-led/), but if you find another you like that's fine too.
 Once you have an LED connected to your raspberry pi, come back here.
 
 -----
 
-So now that you have an LED turning on and off, open up config.json, and change `buzzer_pin` to the **physical pin** number that your LED is connected to.
+Now that you have an LED turning on and off, open config.json, and change `buzzer_pin` to the **physical pin** number your LED is connected to.
 If you used the tutorial I mentioned above, your number is 11.
 Otherwise you can use [this handy digram](http://www.abluestar.com/blog/wp-content/uploads/2013/02/Raspberry-Pi-GPIO-Layout-Revision-1-e1347664808358.png) to figure it out.
 The numbers in the circles are the physical pin numbers.
@@ -73,7 +73,7 @@ At the button hit "[ add ]". Leave the type as "A", pick a subdomain (this can b
 Once you've saved it click on "Dynamic DNS" again and find the "Direct URL" for your subdomain.
 Copy everything after the ? into `freedns_key` in `config.json`.
 
-TODO: separate cron install from main install and say to run it here. 
+Then run [`./bin/cron_install`](/bin/cron_install.sh) which will install a cron to update the ip your DDNS points to periodically.
 
 At this point you should be able to run `npm start` on your raspberry pi and you'll see some stuff like this
 ```
@@ -136,8 +136,11 @@ Once you have the wires hooked up, running `test.js` should open your door!
 
 ## Step 5: Put it all together
 
-Now you should have everything hooked up, installed and configured.
-Try going outside and test it!
+Now you should have almost everything hooked up, installed and configured.
+Run `nmp start` again, go outside and test it!
+
+The one last thing to do is run [`./bin/initd_install`](/bin/initd_install.sh) which will install an init.d script to `/etc/init.d/buzzerbot_init.sh`.
+This will make your buzzzer bot server run whenever your raspberry pi starts up.
 
 Something isn't quite right?
 Did I leave something out?
