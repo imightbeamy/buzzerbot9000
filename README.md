@@ -13,11 +13,7 @@ Checkout this repo, and run npm install:
     cd buzzerbot9000
     npm install
 
-This will...
-
-* Install the needed node modules
-* Install a cron to update a DDNS with https://freedns.afraid.org/
-* Install an init.d script to start up the server
+This will install the needed node modules.
 
 You'll also need to install and use [gpio-admin](https://github.com/quick2wire/quick2wire-gpio-admin):
 
@@ -33,6 +29,9 @@ Add yourself to the gpio group:
 If you're correctly in the group, you should see `gpio` when you run:
 
     groups
+
+Under [bin](/bin) you'll find a script to install a cron to update a DDNS with [freedns](https://freedns.afraid.org/) and a script to install an init.d script to start the server on restart.
+If you're following the tutorial you'll run those later.
 
 ## Setup
 
