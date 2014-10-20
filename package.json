@@ -24,6 +24,7 @@
     "pi-gpio",
     "twilio",
     "underscore",
-    "moment"
+    "moment",
+    "sqlite3"
   ]
 }
