@@ -17,18 +17,17 @@ console.log('Starting...');
 app.get('/sms', twilio.webhook(), function (request, response) {
     console.log(request.query);
 
-    var sms = request.query,
-        twil_res = new twilio.TwimlResponse();
+    var sms = request.query;
 
     buzzer.open_door(sms.Body, sms.From, function (message) {
-        twil_res.message(message || "Welcome, our robot will buzz you in momentarily");
-        console.log("Correct!", sms.Body, sms.From, message);
-    }, function (message) {
-        twil_res.message(message || "Hmmm, that's not a password");
-        console.log("Incorrect!", sms.Body, sms.From, message);
+        var twil_res = new twilio.TwimlResponse();
+
+        twil_res.message(message || "???");
+        console.log('"' + message + '"', sms.Body, sms.From);
+
+        response.send(twil_res);
     });
 
-    response.send(twil_res);
 });
 
 var port = Number(config.port);
