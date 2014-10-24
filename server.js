@@ -21,11 +21,8 @@ app.get('/sms', twilio.webhook(), function (request, response) {
         twil_res = new twilio.TwimlResponse();
 
     buzzer.open_door(sms.Body, sms.From, function (message) {
-        twil_res.message(message || "Welcome, our robot will buzz you in momentarily");
-        console.log("Correct!", sms.Body, sms.From, message);
-    }, function (message) {
-        twil_res.message(message || "Hmmm, that's not a password");
-        console.log("Incorrect!", sms.Body, sms.From, message);
+        twil_res.message(message || "???");
+        console.log(message, sms.Body, sms.From, message);
     });
 
     response.send(twil_res);
