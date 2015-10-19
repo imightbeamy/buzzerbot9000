@@ -8,7 +8,7 @@
         "sesame": {
             "whitelist": [
                 "555-932-1283",
-                "555-223-6513",
+                "555-223-6513"
             ],
             "success_message": "Welcome home! Nice to see you!",
             "fail_message": "Sorry, your magic has no power here"
